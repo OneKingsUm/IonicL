@@ -1,0 +1,17 @@
+<!--<app-header title="Products"></app-header>-->
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let product of products" detail>
+    <ion-thumbnail slot="start">
+      <ion-img alt="{{ product.id }}" [src]="product.images[0]" (ionError)="handleImageError($event)"></ion-img>
+    </ion-thumbnail>
+    <ion-label>
+      <h4>
+        {{ product.title }}
+      </h4>
+      <p>
+        <ion-badge color="primary">${{ product.price }}</ion-badge>
+      </p>
+    </ion-label>
+  </ion-item>
+</ion-content>

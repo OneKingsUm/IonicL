@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div class="screen">
+		<div class="screen__content">
+			<form class="login" [formGroup]="loginForm" (ngSubmit)="login()">
+        <ion-item class="login__field" lines="none">
+          <ion-icon slot="start" name="person-circle" class="login__icon"></ion-icon>
+          <ion-label position="stacked">Correo electrónico</ion-label>
+          <ion-input class="login__input" formControlName="email" type="email"></ion-input>
+          <ion-note color="danger" *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched">Ingresa un correo válido.</ion-note>
+        </ion-item>
+        <ion-item class="login__field" lines="none">
+          <ion-icon slot="start" name="lock-closed" class="login__icon"></ion-icon>
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input class="login__input" formControlName="password" type="password"></ion-input>
+          <ion-note color="danger" *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched">La contraseña es obligatoria.</ion-note>
+        </ion-item>
+
+        <ion-button expand="block" shape="round" fill="outline" type="submit" [disabled]="!loginForm.valid">
+          Iniciar Sesión
+          <ion-icon slot="end" name="log-in"></ion-icon>
+        </ion-button>
+      </form>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>
+	</div>
+</ion-content>

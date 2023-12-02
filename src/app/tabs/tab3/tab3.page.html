@@ -1,0 +1,20 @@
+<!--<app-header title="Profile"></app-header>-->
+
+<ion-content [fullscreen]="true">
+  <ion-card class="profileCard">
+    <div class="image-container" *ngIf="profile">
+      <img alt="Silhouette" [src]="profile.avatar" class="profile-pic" />
+    </div>
+    <ion-card-header>
+      <ion-card-title class="my-color">Mostrar tu nombre completo</ion-card-title>
+      <ion-card-subtitle>Mostrar tu correo electrónico</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-label>Carnet: Mostrar tu carnet</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

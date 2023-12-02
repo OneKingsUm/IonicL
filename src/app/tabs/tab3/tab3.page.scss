@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	font-family: Raleway, sans-serif;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,82,156,1) 100%);
+}
+
+.profile-pic {
+    border-radius: 95%;
+    height: 24vh;
+    padding: 6px;
+}
+
+.profileCard {
+    border-radius: 20px;
+    color: #00529C;
+    font-weight: 300;
+    margin-bottom: 2px;
+}
